@@ -1,5 +1,9 @@
 import requests
 
-response = requests.get("http://randomfox.ca/floof")
-fox = response.json()
-print(fox['image'])
+payload = {'username': 'corey', 'password': 'testing'}
+r = requests.post('https://httpbin.org/post', data=payload)
+
+
+r_dict = r.json()
+
+print(r_dict['form'])
