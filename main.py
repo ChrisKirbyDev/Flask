@@ -1,9 +1,5 @@
 import requests
 
-payload = {'username': 'corey', 'password': 'testing'}
-r = requests.post('https://httpbin.org/post', data=payload)
+r = requests.post('https://httpbin.org/delay/6', timeout=3)
 
-
-r_dict = r.json()
-
-print(r_dict['form'])
+print(r)
